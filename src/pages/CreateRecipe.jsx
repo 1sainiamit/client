@@ -38,7 +38,7 @@ const CreateRecipe = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`http://localhost:3001/recipes`, recipe, {
+      await axios.post(`https://recipe-api-ebon-two.vercel.app/recipes`, recipe, {
         headers: { authorization: cookies.access_token },
       });
       alert("Recipe created successfully");

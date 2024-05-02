@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/recipes`);
+        const response = await axios.get(`https://recipe-api-ebon-two.vercel.app//recipes`);
         setRecipes(response.data);
       } catch (error) {
         console.error(error);
@@ -23,7 +23,7 @@ const Home = () => {
     const fetchSavedRecipes = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3001/recipes/savedRecipes/ids/${userID}`
+          `https://recipe-api-ebon-two.vercel.app/recipes/savedRecipes/ids/${userID}`
         );
         setSavedRecipes(response.data.savedRecipes);
         // console.log(response.data);
@@ -39,7 +39,7 @@ const Home = () => {
   const saveRecipe = async (recipeID) => {
     try {
       const response = await axios.put(
-        `http://localhost:3001/recipes`,
+        `https://recipe-api-ebon-two.vercel.app//recipes`,
         {
           recipeID,
           userID,
