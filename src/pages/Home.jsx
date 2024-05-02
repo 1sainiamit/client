@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        const response = await axios.get(`https://recipe-api-ebon-two.vercel.app//recipes`);
+        const response = await axios.get(`https://recipe-api-ebon-two.vercel.app/recipes`);
         setRecipes(response.data);
       } catch (error) {
         console.error(error);
